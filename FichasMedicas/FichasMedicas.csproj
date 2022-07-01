@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Description />
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <StartupObject>FichasMedicas.App</StartupObject>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageIconUrl />
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>FichasMedicas_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>C:\Users\ignko\OneDrive\Escritorio\New folder\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Img\logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Conexion\Conexion.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+      <PackageReference Include="System.Runtime" Version="4.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\logo.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
